@@ -2,6 +2,10 @@
 
 This project is a GraphQL server for managing student records using MongoDB. The server allows you to perform CRUD operations on student data.
 
+## Live API
+
+You can access the live GraphQL API at: [https://student-management-server-side.onrender.com](https://student-management-server-side.onrender.com)
+
 ## Features
 
 - **Add Student**: Add a new student to the database.
@@ -22,7 +26,8 @@ This project is a GraphQL server for managing student records using MongoDB. The
 
 - Adding a Student
 
-```mutation {
+```
+mutation {
   addStudent(student: {
     name: "Alice",
     age: 30,
