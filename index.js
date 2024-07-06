@@ -14,6 +14,17 @@ const resolvers = {
       return db.collection("students").findOne({ id: args.id });
     },
   },
+  Mutation: {
+    async addStudent(_, args) {
+      const db = await connectDB();
+      let student = {
+        ...args.student,
+        id: Math.floor(Math.random() * 10000).toString(),
+      };
+      await db.collection("students").insertOne(student);
+      return student;
+    },
+  },
 };
 
 // Server setup
