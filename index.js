@@ -1,11 +1,21 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import connectDB from "./db.js";
+import { typeDefs } from "./schema.js";
 
-// server setup
+const resolvers = {
+  Query: {
+    async students() {
+      const db = await connectDB();
+      return db.collection("students").find().toArray();
+    },
+  },
+};
+
+// Server setup
 const server = new ApolloServer({
-  // typeDefs
-  // resolvers
+  typeDefs,
+  resolvers,
 });
 
 const startServer = async () => {
