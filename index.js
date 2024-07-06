@@ -24,6 +24,11 @@ const resolvers = {
       await db.collection("students").insertOne(student);
       return student;
     },
+    async deleteStudent(_, args) {
+      const db = await connectDB();
+      await db.collection("students").deleteOne({ id: args.id });
+      return db.collection("students").find().toArray();
+    },
   },
 };
 

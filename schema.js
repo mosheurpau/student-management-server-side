@@ -16,6 +16,7 @@ type Query {
 
 type Mutation {
     addStudent(student: AddStudent! ) : Student
+    deleteStudent (id: ID!): [Student]
 }
 
 input AddStudent {
