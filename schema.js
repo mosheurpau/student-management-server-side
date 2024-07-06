@@ -17,8 +17,8 @@ type Query {
 type Mutation {
     addStudent(student: AddStudent! ) : Student
     deleteStudent (id: ID!): [Student]
+    updateStudent(id: ID!, edits: EditStudentInput!): Student
 }
-
 input AddStudent {
   name: String!
   age: Int!
@@ -26,6 +26,14 @@ input AddStudent {
   state: String!
   city: String!
   agreed: Boolean!
+}
+input EditStudentInput {
+  name: String
+  age: Int
+  gender: String
+  state: String
+  city: String
+  agreed: Boolean
 }
 
 `;

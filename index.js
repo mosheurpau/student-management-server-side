@@ -29,6 +29,14 @@ const resolvers = {
       await db.collection("students").deleteOne({ id: args.id });
       return db.collection("students").find().toArray();
     },
+    async updateStudent(_, args) {
+      const db = await connectDB();
+      await db
+        .collection("students")
+        .updateOne({ id: args.id }, { $set: args.edits });
+
+      return db.collection("students").findOne({ id: args.id });
+    },
   },
 };
 
