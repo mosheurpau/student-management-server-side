@@ -9,6 +9,10 @@ const resolvers = {
       const db = await connectDB();
       return db.collection("students").find().toArray();
     },
+    async student(_, args) {
+      const db = await connectDB();
+      return db.collection("students").findOne({ id: args.id });
+    },
   },
 };
 

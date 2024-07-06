@@ -11,5 +11,6 @@ type Student {
 
 type Query {
   students: [Student]
+  student(id: ID!): Student
 }
 `;
