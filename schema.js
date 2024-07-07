@@ -4,6 +4,7 @@ type Student {
   name: String!
   age: Int!
   gender: String!
+  country: String!
   state: String!
   city: String!
   agreed: Boolean!
@@ -23,6 +24,7 @@ input AddStudent {
   name: String!
   age: Int!
   gender: String!
+  country: String!
   state: String!
   city: String!
   agreed: Boolean!
