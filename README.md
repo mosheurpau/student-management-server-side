@@ -40,6 +40,7 @@ mutation {
     name
     age
     gender
+    country
     state
     city
     agreed
@@ -56,6 +57,7 @@ query {
     name
     age
     gender
+    country
     state
     city
     agreed
@@ -72,6 +74,7 @@ query {
     name
     age
     gender
+    country
     state
     city
     agreed
@@ -92,6 +95,7 @@ mutation {
     name
     age
     gender
+    country
     state
     city
     agreed
@@ -108,6 +112,7 @@ mutation {
     name
     age
     gender
+    country
     state
     city
     agreed
