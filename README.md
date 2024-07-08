@@ -32,6 +32,7 @@ mutation {
     name: "Alice",
     age: 30,
     gender: "Female",
+    city: "USA",
     state: "California",
     city: "Los Angeles",
     agreed: true

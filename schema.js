@@ -33,6 +33,7 @@ input EditStudentInput {
   name: String
   age: Int
   gender: String
+  country: String!
   state: String
   city: String
   agreed: Boolean
